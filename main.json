@@ -1,0 +1,55 @@
+{
+  "players": [
+    {
+      "name": "Daryl Ginn",
+      "icon": "img/player1.png",
+      "country": "United Kingdom"
+    },
+    {
+      "name": "John Mac",
+      "icon": "img/player2.png",
+      "country": "United States"
+    },
+    {
+      "name": "Aaron Sananes",
+      "icon": "img/player3.png",
+      "country": "United Kingdom"
+    },
+    {
+      "name": "Erik Henebratt",
+      "icon": "img/player4.png",
+      "country": "Sweden"
+    },
+    {
+      "name": "Lindsay Scott",
+      "icon": "img/player5.png",
+      "country": "South Africa"
+    },
+    {
+      "name": "Jimmy Mars",
+      "icon": "img/player4.png",
+      "country": "Australia"
+    },
+    {
+      "name": "Daryl Ginn",
+      "icon": "img/player6.png", 
+      "country": "United Kingdom"
+    },
+    {
+      "name": "John Mac",
+      "icon": "img/player8.png",
+      "country": "United Kingdom"
+    },
+    {
+      "name": "Aaron Sananes",
+      "icon": "img/player9.png",
+      "country": "United Kingdom"
+    }
+  ],
+  "user": {
+    "name": "Aaron Sananes",
+    "icon": "img/player3.png",
+    "country": "United Kingdom",
+    "messages": 2
+  }
+}

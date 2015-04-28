@@ -1,0 +1,679 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 75, ../sass/main.scss */
+.top-nav-container {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  background-color: #34383c;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 83, ../sass/main.scss */
+.top-nav-container .top-nav {
+  font-family: "Avenir Next LT Pro Regular";
+  width: -moz-calc(100vw - 270px);
+  width: -webkit-calc(100vw - 270px);
+  width: calc(100vw - 270px);
+  display: inline-block;
+}
+/* line 87, ../sass/main.scss */
+.top-nav-container .top-nav .links {
+  float: left;
+  line-height: 63px;
+  height: 66px;
+}
+/* line 91, ../sass/main.scss */
+.top-nav-container .top-nav .links a {
+  font-size: 13.69px;
+  color: #89949f;
+  margin-left: 33px;
+  display: inline-block;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 97, ../sass/main.scss */
+.top-nav-container .top-nav .links a:nth-child(2) {
+  padding-left: 1px;
+}
+/* line 100, ../sass/main.scss */
+.top-nav-container .top-nav .links a:hover {
+  text-decoration: none;
+  color: #cdd4db;
+}
+/* line 108, ../sass/main.scss */
+.top-nav-container .top-nav .search {
+  margin-right: 12px;
+  margin-top: 14.5px;
+  width: 281px;
+  float: right;
+}
+/* line 113, ../sass/main.scss */
+.top-nav-container .top-nav .search input, .top-nav-container .top-nav .search span {
+  color: #6c757e;
+  background-color: #4b5056;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  height: 35px;
+  padding: 0;
+  width: 251px;
+  padding-left: 9px;
+  padding-top: 0.9844px;
+  font-size: 19px;
+  font-family: "Avenir Next LT Pro Regular";
+}
+/* line 128, ../sass/main.scss */
+.top-nav-container .top-nav .search span {
+  font-size: 21px;
+  padding-left: 8px;
+}
+/* line 135, ../sass/main.scss */
+.top-nav-container .logo {
+  width: 79px;
+  height: 66px;
+  float: left;
+  background-color: #1e2226;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+}
+/* line 142, ../sass/main.scss */
+.top-nav-container .logo img {
+  margin-top: 18px;
+}
+/* line 147, ../sass/main.scss */
+.top-nav-container .my-profile {
+  background-color: #1e2226;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  float: right;
+  width: 191px;
+  height: 66px;
+}
+/* line 154, ../sass/main.scss */
+.top-nav-container .my-profile .container {
+  padding: 17.5px 0 0 17px;
+  font-family: "Nunito", "Avenir Next LT Pro Regular";
+  width: 100%;
+}
+/* line 158, ../sass/main.scss */
+.top-nav-container .my-profile .container #user-icon {
+  width: 30px;
+  border-radius: 100px;
+  display: inline;
+}
+/* line 163, ../sass/main.scss */
+.top-nav-container .my-profile .container #msgs {
+  display: inline;
+  position: absolute;
+  font-size: 10.78px;
+  color: #fff;
+  background-color: #f15822;
+  width: 19px;
+  border-radius: 100%;
+  margin-left: -18px;
+  margin-top: -4.4px;
+  text-align: center;
+  line-height: 19px;
+}
+/* line 176, ../sass/main.scss */
+.top-nav-container .my-profile .container #user-name {
+  padding-left: 13px;
+  font-size: 13.69px;
+  font-weight: 300;
+  display: inline;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 182, ../sass/main.scss */
+.top-nav-container .my-profile .container #user-name a, .top-nav-container .my-profile .container #user-name i {
+  color: #929aa2;
+  text-decoration: none;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 186, ../sass/main.scss */
+.top-nav-container .my-profile .container #user-name a:hover + i, .top-nav-container .my-profile .container #user-name a:hover, .top-nav-container .my-profile .container #user-name i:hover + i, .top-nav-container .my-profile .container #user-name i:hover {
+  color: #c8ccd0;
+}
+/* line 190, ../sass/main.scss */
+.top-nav-container .my-profile .container #user-name i {
+  padding-left: 6.5px;
+  color: #6c757e;
+}
+
+/* line 199, ../sass/main.scss */
+.side-bar {
+  float: left;
+  width: 79px;
+  background-color: #91c46b;
+  height: -moz-calc(100vh - 66px);
+  height: -webkit-calc(100vh - 66px);
+  height: calc(100vh - 66px);
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 206, ../sass/main.scss */
+.side-bar a {
+  margin-top: 18px;
+  padding-left: 12px;
+  display: block;
+  color: #57893e;
+  text-decoration: none;
+  font-size: 26px;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 214, ../sass/main.scss */
+.side-bar a:hover, .side-bar a:focus {
+  color: #30572a;
+  text-decoration: none;
+}
+/* line 218, ../sass/main.scss */
+.side-bar a:nth-child(2) {
+  margin-left: -1px;
+}
+/* line 221, ../sass/main.scss */
+.side-bar a:nth-child(4) {
+  padding-left: 10px;
+  font-size: 24px;
+}
+/* line 225, ../sass/main.scss */
+.side-bar a:nth-child(5) {
+  font-size: 25px;
+  padding-top: 1px;
+}
+
+/* line 233, ../sass/main.scss */
+.side-bar .container {
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* line 239, ../sass/main.scss */
+.main-content {
+  float: right;
+  width: -moz-calc(100vw - 79px);
+  width: -webkit-calc(100vw - 79px);
+  width: calc(100vw - 79px);
+  height: -moz-calc(100vh - 66px);
+  height: -webkit-calc(100vh - 66px);
+  height: calc(100vh - 66px);
+  overflow: auto;
+}
+/* line 245, ../sass/main.scss */
+.main-content .content-wrapper {
+  position: relative;
+  height: -moz-calc((100vw * 0.69375) * 0.926);
+  height: -webkit-calc((100vw * 0.69375) * 0.926);
+  height: calc((100vw * 0.69375) * 0.926);
+  width: 100%;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 251, ../sass/main.scss */
+.main-content .content-wrapper .content-title {
+  width: 100%;
+  height: 8.4%;
+}
+/* line 254, ../sass/main.scss */
+.main-content .content-wrapper .content-title span {
+  color: #c7cbd0;
+  font-size: 1vw;
+  padding-left: 0.3vw;
+}
+/* line 259, ../sass/main.scss */
+.main-content .content-wrapper .content-title h4 {
+  font-family: "Avenir Next LT Pro Regular";
+  color: #6c757e;
+  font-size: 1.35vw;
+  padding: 1.5% 0 0 2.8vw;
+  display: inline-block;
+}
+
+/* line 271, ../sass/main.scss */
+.big-stats {
+  -webkit-box-shadow: inset 0px 2px 3px 0px #e3e3e3;
+  -moz-box-shadow: inset 0px 2px 3px 0px #e3e3e3;
+  box-shadow: inset 0px 2px 3px 0px #e3e3e3;
+  width: 100%;
+  height: 12.2%;
+  background-color: #f6f6f6;
+}
+/* line 276, ../sass/main.scss */
+.big-stats .row {
+  width: 97.2%;
+  height: 100%;
+  margin: 0;
+  margin-left: 2.8%;
+  padding: 0;
+}
+/* line 284, ../sass/main.scss */
+.big-stats .stat {
+  margin-top: 1.7%;
+  height: 55.43%;
+  font-family: "Avenir Next LT Pro Regular";
+  display: inline-block;
+}
+/* line 288, ../sass/main.scss */
+.big-stats .stat h2, .big-stats .stat h3 {
+  padding-top: 0.5vh;
+  padding-left: 1.3vw;
+  font-size: 2.6vw;
+  margin: 0;
+  color: #5c636c;
+}
+/* line 295, ../sass/main.scss */
+.big-stats .stat h3 {
+  color: #a5acb4;
+  font-size: 1.05vw;
+  padding-left: 16px;
+}
+/* line 300, ../sass/main.scss */
+.big-stats .stat:nth-child(1) {
+  border-left: 0.3vw solid #91c46b;
+}
+/* line 303, ../sass/main.scss */
+.big-stats .stat:nth-child(2) {
+  margin-left: 6.36vw;
+  border-left: 0.3vw solid #287e7e;
+}
+/* line 307, ../sass/main.scss */
+.big-stats .stat:nth-child(3) {
+  margin-left: 6.74vw;
+  border-left: 0.3vw solid #91c46b;
+}
+/* line 311, ../sass/main.scss */
+.big-stats .stat:nth-child(4) {
+  margin-left: 4.43vw;
+  border-left: 0.3vw solid #f15822;
+}
+/* line 315, ../sass/main.scss */
+.big-stats .stat:nth-child(5) {
+  margin-left: 6.9vw;
+  border-left: 0.3vw solid #91c46b;
+}
+/* line 319, ../sass/main.scss */
+.big-stats .stat:nth-child(6) {
+  margin-left: 7.2vw;
+  border-left: 0.3vw solid #f15822;
+}
+
+/* line 328, ../sass/main.scss */
+.content {
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 79.4%;
+  font-family: "Avenir Next LT Pro Regular";
+}
+/* line 335, ../sass/main.scss */
+.content .container {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+/* line 342, ../sass/main.scss */
+.content .active-players, .content .active-tourneys {
+  float: left;
+  width: 50%;
+  height: 55%;
+}
+/* line 346, ../sass/main.scss */
+.content .active-players h3, .content .active-tourneys h3 {
+  color: #6c757e;
+  font-size: 1.388vw;
+  padding: 1.4% 0 0 6.3%;
+  display: inline-block;
+}
+/* line 352, ../sass/main.scss */
+.content .active-players .btn-group, .content .active-tourneys .btn-group {
+  float: right;
+  padding: 4.3% 1.4% 0 0;
+}
+/* line 355, ../sass/main.scss */
+.content .active-players .btn-group button, .content .active-tourneys .btn-group button {
+  padding: 4% 13%;
+  font-size: 0.88vw;
+  border-color: #dfdfdf;
+  background-color: #f3f3f3;
+  border-radius: 3px;
+}
+/* line 361, ../sass/main.scss */
+.content .active-players .btn-group button span, .content .active-tourneys .btn-group button span {
+  padding-left: 0.1%;
+  font-size: 0.65vw;
+}
+/* line 366, ../sass/main.scss */
+.content .active-players .btn-group .dropdown-menu, .content .active-tourneys .btn-group .dropdown-menu {
+  padding: 0;
+  margin: 0;
+}
+/* line 371, ../sass/main.scss */
+.content .active-players #player-chart, .content .active-players #tourneys-chart, .content .active-tourneys #player-chart, .content .active-tourneys #tourneys-chart {
+  width: 93.2%;
+  height: 68.5%;
+  margin-top: 3.2%;
+  margin-left: 5%;
+}
+/* line 377, ../sass/main.scss */
+.content .active-players #tourneys-chart, .content .active-tourneys #tourneys-chart {
+  margin-left: 4%;
+}
+/* line 381, ../sass/main.scss */
+.content .active-tourneys {
+  float: right;
+}
+
+/* line 387, ../sass/main.scss */
+.recent-players, .player-stats {
+  float: left;
+  width: 52.1%;
+  height: 45%;
+}
+/* line 391, ../sass/main.scss */
+.recent-players .container, .player-stats .container {
+  padding-left: 5.7%;
+}
+/* line 393, ../sass/main.scss */
+.recent-players .container h3, .player-stats .container h3 {
+  color: #6c757e;
+  font-size: 1.388vw;
+  padding: 1.4% 0 0 0.3%;
+  display: inline-block;
+}
+/* line 399, ../sass/main.scss */
+.recent-players .container .arrows, .player-stats .container .arrows {
+  float: right;
+  margin-top: 4.5%;
+  margin-right: 6%;
+  font-size: 0.7vw;
+}
+/* line 404, ../sass/main.scss */
+.recent-players .container .arrows .arrow, .player-stats .container .arrows .arrow {
+  text-align: center;
+  line-height: 1.7vw;
+  float: right;
+  width: 1.46vw;
+  height: 1.68vw;
+  border: 0.1vw solid #E0E0DE;
+}
+/* line 412, ../sass/main.scss */
+.recent-players .container .arrows #left, .recent-players .container .arrows #right, .player-stats .container .arrows #left, .player-stats .container .arrows #right {
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 414, ../sass/main.scss */
+.recent-players .container .arrows #left:hover + i, .recent-players .container .arrows #left:hover, .recent-players .container .arrows #right:hover + i, .recent-players .container .arrows #right:hover, .player-stats .container .arrows #left:hover + i, .player-stats .container .arrows #left:hover, .player-stats .container .arrows #right:hover + i, .player-stats .container .arrows #right:hover {
+  background-color: #e0e0df;
+}
+/* line 418, ../sass/main.scss */
+.recent-players .container .arrows #left, .player-stats .container .arrows #left {
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+/* line 422, ../sass/main.scss */
+.recent-players .container .arrows #right, .player-stats .container .arrows #right {
+  border-radius: 0 3px 3px 0;
+}
+/* line 425, ../sass/main.scss */
+.recent-players .container .arrows i, .player-stats .container .arrows i {
+  color: #9e9f9e;
+}
+/* line 430, ../sass/main.scss */
+.recent-players .row, .player-stats .row {
+  margin: 3.5% 0 0 -0.2%;
+  width: 100%;
+}
+/* line 433, ../sass/main.scss */
+.recent-players .row .col-md-4, .player-stats .row .col-md-4 {
+  padding: 0;
+  margin-bottom: 4.5%;
+}
+/* line 436, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(7), .recent-players .row .col-md-4:nth-child(8), .recent-players .row .col-md-4:nth-child(9), .player-stats .row .col-md-4:nth-child(7), .player-stats .row .col-md-4:nth-child(8), .player-stats .row .col-md-4:nth-child(9) {
+  margin-top: 0.85%;
+}
+/* line 439, ../sass/main.scss */
+.recent-players .row .col-md-4 img, .player-stats .row .col-md-4 img {
+  float: left;
+  width: 22.5%;
+  border-radius: 100%;
+}
+/* line 444, ../sass/main.scss */
+.recent-players .row .col-md-4 .details, .player-stats .row .col-md-4 .details {
+  font-size: 1.2px;
+}
+/* line 446, ../sass/main.scss */
+.recent-players .row .col-md-4 .details h3, .player-stats .row .col-md-4 .details h3 {
+  margin: 1% 0 0 5.3%;
+  font-size: 1.06vw;
+  color: #6c757e;
+}
+/* line 451, ../sass/main.scss */
+.recent-players .row .col-md-4 .details h4, .player-stats .row .col-md-4 .details h4 {
+  margin: 3.3% 0 0 28.3%;
+  font-size: 0.9vw;
+  color: #a6aaae;
+}
+/* line 458, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(3) h3, .recent-players .row .col-md-4:nth-child(9) h3, .recent-players .row .col-md-4:nth-child(8) h3, .player-stats .row .col-md-4:nth-child(3) h3, .player-stats .row .col-md-4:nth-child(9) h3, .player-stats .row .col-md-4:nth-child(8) h3 {
+  margin-left: 6%;
+}
+/* line 461, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(3) h4, .recent-players .row .col-md-4:nth-child(9) h4, .recent-players .row .col-md-4:nth-child(8) h4, .player-stats .row .col-md-4:nth-child(3) h4, .player-stats .row .col-md-4:nth-child(9) h4, .player-stats .row .col-md-4:nth-child(8) h4 {
+  padding-left: 1%;
+}
+/* line 466, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(4) h4, .player-stats .row .col-md-4:nth-child(4) h4 {
+  padding-top: 1%;
+}
+/* line 471, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(5) h3, .recent-players .row .col-md-4:nth-child(6) h3, .player-stats .row .col-md-4:nth-child(5) h3, .player-stats .row .col-md-4:nth-child(6) h3 {
+  margin: 2% 0 0 6%;
+}
+/* line 474, ../sass/main.scss */
+.recent-players .row .col-md-4:nth-child(5) h4, .recent-players .row .col-md-4:nth-child(6) h4, .player-stats .row .col-md-4:nth-child(5) h4, .player-stats .row .col-md-4:nth-child(6) h4 {
+  padding: 0.25% 0 0 0.9%;
+}
+
+/* line 482, ../sass/main.scss */
+.player-stats {
+  width: 47.9%;
+  float: right;
+}
+/* line 485, ../sass/main.scss */
+.player-stats .container {
+  margin: 0;
+  padding: 0;
+}
+/* line 489, ../sass/main.scss */
+.player-stats .content-title-left {
+  font-family: 'Nunito';
+  margin-left: 0.1%;
+  font-size: 1.42vw;
+}
+/* line 494, ../sass/main.scss */
+.player-stats .arrows {
+  margin-right: 3.56%;
+}
+/* line 497, ../sass/main.scss */
+.player-stats .row {
+  height: 50%;
+}
+/* line 499, ../sass/main.scss */
+.player-stats .row .col-md-3 {
+  height: 100%;
+  padding: 3% 0 0 0;
+}
+/* line 502, ../sass/main.scss */
+.player-stats .row .col-md-3:nth-child(2) {
+  padding-top: 3.6%;
+  padding-left: 1.05%;
+}
+/* line 506, ../sass/main.scss */
+.player-stats .row .col-md-3:nth-child(3) {
+  padding-top: 3.4%;
+  padding-left: 1%;
+}
+/* line 510, ../sass/main.scss */
+.player-stats .row .col-md-3:nth-child(4) {
+  padding-top: 3.6%;
+  padding-left: 2.33%;
+}
+/* line 514, ../sass/main.scss */
+.player-stats .row .col-md-3 h3 {
+  font-size: 17.5px;
+  margin-left: 4px;
+}
+/* line 521, ../sass/main.scss */
+.player-stats .circle-bg {
+  width: 109px;
+  height: 109px;
+  background-color: #d2d4d8;
+  border-radius: 50%;
+}
+/* line 528, ../sass/main.scss */
+.player-stats .circle-bg .circle .cover, .player-stats .circle-bg .circle .fill {
+  width: 109px;
+  height: 109px;
+  border-radius: 50%;
+  position: absolute;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/* line 535, ../sass/main.scss */
+.player-stats .circle-bg .circle .fill {
+  width: 100%;
+  height: 100%;
+  background-color: #56606e;
+}
+/* line 540, ../sass/main.scss */
+.player-stats .circle-bg .circle #fill-2, .player-stats .circle-bg .circle #fix-2, .player-stats .circle-bg .circle #fix-4, .player-stats .circle-bg .circle #fill-4 {
+  background-color: #91c46b;
+}
+/* line 545, ../sass/main.scss */
+.player-stats .circle-bg .inset {
+  width: 90px;
+  height: 90px;
+  background-color: #f3f3f3;
+  font-family: "Avenir Next LT Pro Regular";
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  padding: 28px 5px 0 0;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 9px;
+  margin-top: 9.3px;
+}
+/* line 558, ../sass/main.scss */
+.player-stats .circle-bg .inset span {
+  font-size: 17px;
+  position: absolute;
+  margin: 1.828px 0 0 -0.906px;
+}
+/* line 563, ../sass/main.scss */
+.player-stats .circle-bg .inset:nth-child(2) {
+  padding: 28px 5px 0 0;
+}
+/* line 566, ../sass/main.scss */
+.player-stats .circle-bg .inset:nth-child(3) {
+  padding-top: 25px;
+}
+/* line 569, ../sass/main.scss */
+.player-stats .circle-bg .inset:nth-child(4) {
+  padding: 24px 8px 0 0;
+}

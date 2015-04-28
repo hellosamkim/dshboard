@@ -1,0 +1,574 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "compass/reset";
+
+// Color variables
+$main-font: 'Avenir Next LT Pro Regular';
+$top-nav-bg: #34383c;
+$side-bar-bg: #91c46b;
+$side-bar-icons: #57893e;
+$main-content-bg: #f3f3f3;
+$big-stats-bg: #f6f6f6;
+$big-stats: #a5acb4;
+$big-stats-numbers: #5c636c;
+$top-nav-bg-2: #1e2226;
+$top-nav-color: #89949f;
+$search-bg: #4b5056;
+// search-color is also: -dashboard title color -recent-player names
+$search-color: #6c757e;
+$dash-icon: #c7cbd0;
+$user-name: #929aa2;
+$circle-background: #d2d4d8;
+$circle-color: #56606e;
+$circle-color-2: $side-bar-bg;
+$circle-diameter: 109px;
+
+
+// Custom mixins
+// border radius for dashboard
+@mixin border-radius($pos, $side) {
+  @if $pos == "top" {
+    @if $side == "left" {
+      @include border-top-left-radius(5px);
+    } @if $side == "right" {
+      @include border-top-right-radius(5px);
+    } @if $side == "both" {
+      @include border-top-left-radius(5px);
+      @include border-top-right-radius(5px);
+    }
+  } @else if $pos == "bottom" {
+    @if $side == "left" {
+      @include border-bottom-left-radius(5px);
+    } @if $side == "right" {
+      @include border-bottom-right-radius(5px);
+    } @if $side == "both" {
+      @include border-bottom-left-radius(5px);
+      @include border-bottom-right-radius(5px);
+    }
+  }
+}
+
+// browser compatible calc func
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// height measurement for different resolution
+@mixin content-height() {
+  @include calc( height, '(100vw * 0.69375) * 0.926');
+}
+
+// box-shadow for main content
+@mixin content-shadow() {
+  -webkit-box-shadow: inset 0px 2px 3px 0px rgba(227,227,227,1);
+  -moz-box-shadow: inset 0px 2px 3px 0px rgba(227,227,227,1);
+  box-shadow: inset 0px 2px 3px 0px rgba(227,227,227,1);
+}
+
+// top nav container
+.top-nav-container {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  background-color: $top-nav-bg;
+  @include border-radius('top', 'both');
+  
+  // top nav links section
+  .top-nav {
+    font-family: $main-font;
+    @include calc( width, '100vw - 270px');
+    display: inline-block;
+    .links {
+      float: left;
+      line-height: 63px;
+      height: 66px;
+      a {
+        font-size: 13.69px;
+        color: $top-nav-color;
+        margin-left: 33px;
+        display: inline-block;
+        @include transition-duration(0.2s);
+        &:nth-child(2) {
+          padding-left: 1px;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #cdd4db;
+        }
+      }
+    }
+
+    // search bar section
+    .search {
+      margin-right: 12px;
+      margin-top: 14.5px;
+      width: 281px;
+      float: right;
+      input, span {
+        color: $search-color;
+        background-color: $search-bg;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        height: 35px;
+        padding: 0;
+        width: 251px;
+        padding-left: 9px;
+        padding-top: 0.9844px;
+        font-size: 19px;
+        font-family: $main-font;
+      }
+      span {
+        font-size: 21px;
+        padding-left: 8px;
+      }
+    }
+  }
+  // logo
+  .logo {
+    width: 79px;
+    height: 66px;
+    float: left;
+    background-color: $top-nav-bg-2;
+    @include border-radius('top', 'left');
+    text-align: center;
+    img {
+      margin-top: 18px;
+    }
+  }
+  // my profile section
+  .my-profile {
+    background-color: $top-nav-bg-2;
+    @include border-radius('top', 'right');
+    float: right;
+    width: 191px;
+    height: 66px;
+  }
+  .my-profile .container {
+    padding: 17.5px 0 0 17px;
+    font-family: "Nunito", "Avenir Next LT Pro Regular";
+    width: 100%;
+    #user-icon {
+      width: 30px;
+      border-radius: 100px;
+      display: inline;
+    }
+    #msgs {
+      display: inline;
+      position: absolute;
+      font-size: 10.78px;
+      color: #fff;
+      background-color: #f15822;
+      width: 19px;
+      border-radius: 100%;
+      margin-left: -18px;
+      margin-top: -4.4px;
+      text-align: center;
+      line-height: 19px;
+    }
+    #user-name {
+      padding-left: 13px;
+      font-size: 13.69px;
+      font-weight: 300;
+      display: inline;
+      @include transition(0.2s);
+      a, i {
+        color: $user-name;
+        text-decoration: none;
+        @include transition(0.2s);
+        &:hover + i, &:hover {
+          color: #c8ccd0;
+        }
+      }
+      i {
+        padding-left: 6.5px;
+        color: #6c757e;
+      }
+    }
+  }
+}
+
+// side bar wrapper
+.side-bar {
+  float: left;
+  width: 79px;
+  background-color: $side-bar-bg;
+  @include calc( height, '100vh - 66px' );
+  @include border-radius('bottom', 'left');
+  // side bar link icons
+  a {
+    margin-top: 18px;
+    padding-left: 12px;
+    display: block;
+    color: $side-bar-icons;
+    text-decoration: none;
+    font-size: 26px;
+    @include transition(0.2s);
+    &:hover, &:focus {
+      color: #30572a;
+      text-decoration: none;
+    }
+    &:nth-child(2) {
+      margin-left: -1px;
+    }
+    &:nth-child(4) {
+      padding-left: 10px;
+      font-size: 24px;
+    }
+    &:nth-child(5) {
+      font-size: 25px;
+      padding-top: 1px;
+    }
+  }
+}
+
+// sidebar container with icons
+.side-bar .container {
+  margin-top: 4px;
+  width: 100%;
+}
+
+// main dashboard contents
+.main-content {
+  float: right;
+  @include calc( width, '100vw - 79px');
+  @include calc( height, '100vh - 66px' );
+  overflow: auto;
+
+  .content-wrapper {
+    position: relative;
+    @include content-height;
+    width: 100%;
+    @include border-radius('bottom', 'right');
+
+    .content-title {
+      width: 100%;
+      height: 8.4%;
+      span {
+        color: $dash-icon;
+        font-size: 1vw;
+        padding-left: 0.3vw;
+      }
+      h4 {
+        font-family: $main-font;
+        color: $search-color;
+        font-size: 1.35vw;
+        padding: 1.5% 0 0 2.8vw;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// dashboard top stats
+.big-stats {
+  @include content-shadow;
+  width: 100%;
+  height: 12.2%;
+  background-color: $big-stats-bg;
+  .row {
+    width: 97.2%;
+    height: 100%;
+    margin: 0;
+    margin-left: 2.8%;
+    padding: 0;
+  }
+  // each stats
+  .stat {
+    margin-top: 1.7%;
+    height: 55.43%;
+    font-family: $main-font;
+    h2, h3 {
+      padding-top: 0.5vh;
+      padding-left: 1.3vw;
+      font-size: 2.6vw;
+      margin: 0;
+      color: $big-stats-numbers;
+    }
+    h3 {
+      color: $big-stats;
+      font-size: 1.05vw;
+      padding-left: 16px;
+    }
+    &:nth-child(1) {
+      border-left: 0.3vw solid #91c46b;  
+    }
+    &:nth-child(2) {
+      margin-left: 6.36vw;
+      border-left: 0.3vw solid #287e7e;  
+    }
+    &:nth-child(3) {
+      margin-left: 6.74vw;
+      border-left: 0.3vw solid #91c46b;  
+    }
+    &:nth-child(4) {
+      margin-left: 4.43vw;
+      border-left: 0.3vw solid #f15822;  
+    }
+    &:nth-child(5) {
+      margin-left: 6.9vw;
+      border-left: 0.3vw solid #91c46b;  
+    }
+    &:nth-child(6) {
+      margin-left: 7.2vw;
+      border-left: 0.3vw solid #f15822;  
+    }
+    display: inline-block;
+  }
+}
+
+// main contents
+.content {
+  @include border-radius('bottom', 'right');
+  background-color: $main-content-bg;
+  width: 100%;
+  height: 79.4%;
+  font-family: $main-font;
+  // content container
+  .container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  // active players and active tournaments chart sections
+  .active-players, .active-tourneys {
+    float: left;
+    width: 50%;
+    height: 55%;
+    h3 {
+      color: $search-color;
+      font-size: 1.388vw;
+      padding: 1.4% 0 0 6.3%;
+      display: inline-block;
+    }
+    .btn-group {
+      float: right;
+      padding: 4.3% 1.4% 0 0;
+      button {
+        padding: 4% 13%;
+        font-size: 0.88vw;
+        border-color: #dfdfdf;
+        background-color: $main-content-bg;
+        border-radius: 3px;
+        span {
+          padding-left: 0.1%;
+          font-size: 0.65vw;
+        }
+      }
+      .dropdown-menu {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    #player-chart, #tourneys-chart {
+      width: 93.2%;
+      height: 68.5%;
+      margin-top: 3.2%;
+      margin-left: 5%;
+    }
+    #tourneys-chart {
+      margin-left: 4%;
+    }
+  }
+  .active-tourneys {
+    float: right;
+  }
+}
+
+// recent players and playster statistics
+.recent-players, .player-stats {
+  float: left;
+  width: 52.1%;
+  height: 45%;
+  .container {
+    padding-left: 5.7%;
+    h3 {
+      color: $search-color;
+      font-size: 1.388vw;
+      padding: 1.4% 0 0 0.3%;
+      display: inline-block;
+    }
+    .arrows {   
+      float: right;
+      margin-top: 4.5%;
+      margin-right: 6%;
+      font-size: 0.7vw;
+      .arrow {
+        text-align: center;
+        line-height: 1.7vw;
+        float: right;
+        width: 1.46vw;
+        height: 1.68vw;
+        border: 0.1vw solid #E0E0DE;
+      }
+      #left, #right {
+        @include transition(0.2s);
+        &:hover + i, &:hover {
+          background-color: #e0e0df;
+        }
+      }
+      #left {
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+      }
+      #right {
+        border-radius: 0 3px 3px 0;
+      }
+      i {
+        color: #9e9f9e;
+      }
+    }
+  }
+  .row {
+    margin: 3.5% 0 0 -0.2%;
+    width: 100%;
+    .col-md-4 {
+      padding: 0;
+      margin-bottom: 4.5%;
+      &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+        margin-top: 0.85%;
+      }
+      img {
+        float: left;
+        width: 22.5%;
+        border-radius: 100%;
+      }
+      .details {
+        font-size: 1.2px;
+        h3 {
+          margin: 1% 0 0 5.3%;
+          font-size: 1.06vw;
+          color: $search-color;
+        }
+        h4 {
+          margin: 3.3% 0 0 28.3%;
+          font-size: 0.9vw;
+          color: #a6aaae;
+        }
+      }
+      &:nth-child(3), &:nth-child(9), &:nth-child(8) {
+        h3 {
+          margin-left: 6%;
+        }
+        h4 {
+          padding-left: 1%;
+        }
+      }
+      &:nth-child(4) {
+        h4 {
+          padding-top: 1%;
+        }
+      }
+      &:nth-child(5), &:nth-child(6) {
+        h3 {
+          margin: 2% 0 0 6%;
+        }
+        h4 {
+          padding: 0.25% 0 0 0.9%;
+        }
+      }
+    }
+  }
+}
+// player stats with donut chart
+.player-stats {
+  width: 47.9%;
+  float: right;
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .content-title-left {
+    font-family: 'Nunito';  
+    margin-left: 0.1%;
+    font-size: 1.42vw;
+  }
+  .arrows {
+    margin-right: 3.56%;
+  }
+  .row {
+    height: 50%;
+    .col-md-3 {
+      height: 100%;
+      padding: 3% 0 0 0;
+      &:nth-child(2) {
+        padding-top: 3.6%;
+        padding-left: 1.05%;
+      }
+      &:nth-child(3) {
+        padding-top: 3.4%;
+        padding-left: 1%;
+      }
+      &:nth-child(4) {
+        padding-top: 3.6%;
+        padding-left: 2.33%;
+      }
+      h3 {
+        font-size: 17.5px;
+        margin-left: 4px;
+      }
+    }
+  }
+  // donut chart background
+  .circle-bg {
+    width: $circle-diameter;
+    height: $circle-diameter;
+    background-color: $circle-background;
+    border-radius: 50%;
+    // donut circle
+    .circle {
+      .cover, .fill {
+        width: $circle-diameter;
+        height: $circle-diameter;
+        border-radius: 50%;
+        position: absolute;
+        @include transition(1s);
+      }
+      .fill {
+        width: 100%;
+        height: 100%;
+        background-color: $circle-color;
+      }
+      #fill-2, #fix-2, #fix-4, #fill-4 {
+        background-color: $side-bar-bg;
+      }
+    }
+    // inside stroke with percentage
+    .inset {
+      width: 90px;
+      height: 90px;
+      background-color: #f3f3f3;
+      font-family: $main-font;
+      font-weight: bold;
+      text-align: center;
+      font-size: 30px;
+      padding: 28px 5px 0 0;
+      position: absolute;
+      border-radius: 50%;
+      margin-left: 9px;
+      margin-top: 9.3px;
+      span {
+        font-size: 17px;
+        position: absolute;
+        margin: 1.828px 0 0 -0.906px;
+      }
+      &:nth-child(2) {
+        padding: 28px 5px 0 0;
+      }
+      &:nth-child(3) {
+        padding-top: 25px;
+      }
+      &:nth-child(4) {
+        padding: 24px 8px 0 0;
+      }
+    }
+  }
+}
